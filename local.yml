@@ -13,7 +13,7 @@
           - htop
           - tmux
           # dconf depends on psutil
-          - python-psutil
+          #- python-psutil
     #
     # wallpapers
     #
@@ -24,10 +24,8 @@
         owner: root
         group: root
     - name: set wallpaper
-      dconf:
-        key: "/org/gnome/desktop/background/picture-uri"
-        value: "'file:///usr/share/backgrounds/tztz-custom/norway1.jpg'"
+      gsetting:
+        org.gnome.desktop.background.picture-uri: "'file:///usr/share/backgrounds/tztz-custom/norway1.jpg'"
     - name: set wallpaper position
-      dconf:
-        key: "/org/gnome/desktop/background/picture-options"
-        value: "'zoom'"
+      gsetting:
+        org.gnome.desktop.background.picture-options: "'zoom'"
