@@ -12,6 +12,8 @@
         name:
           - htop
           - tmux
+          # dconf depends on psutil
+          - python-psutil
     #
     # wallpapers
     #
