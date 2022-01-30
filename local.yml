@@ -13,7 +13,8 @@
           - htop
           - tmux
           # dconf depends on psutil
-          #- python-psutil
+          - python3-psutil
+
     #
     # wallpapers
     #
@@ -23,9 +24,13 @@
         dest: /usr/share/backgrounds/tztz-custom/
         owner: root
         group: root
+
     - name: set wallpaper
-      gsetting:
-        org.gnome.desktop.background.picture-uri: "'file:///usr/share/backgrounds/tztz-custom/norway1.jpg'"
+      dconf:
+        key: "'/org/gnome/desktop/background/picture-uri'"
+        value: "'file:///usr/share/backgrounds/tztz-custom/norway1.jpg'"
+
     - name: set wallpaper position
-      gsetting:
-        org.gnome.desktop.background.picture-options: "'zoom'"
+      dconf:
+        key: "'/org/gnome/desktop/background/picture-options'"
+        value: "'zoom'"
