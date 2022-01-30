@@ -27,10 +27,12 @@
 
     - name: set wallpaper
       dconf:
+        user: root
         key: "/org/gnome/desktop/background/picture-uri"
         value: "'file:///usr/share/backgrounds/tztz-custom/norway1.jpg'"
 
     - name: set wallpaper position
       dconf:
+        user: root
         key: "/org/gnome/desktop/background/picture-options"
         value: "'zoom'"
