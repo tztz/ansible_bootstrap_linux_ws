@@ -13,7 +13,7 @@
           - htop
           - tmux
           # dconf depends on psutil
-          - python3-psutil
+          - python-psutil
 
     #
     # wallpapers
